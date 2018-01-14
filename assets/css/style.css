@@ -1,0 +1,170 @@
+.labels {
+  display: inline-block !important; }
+
+.header-footer {
+  background-color: #E9E581; }
+
+.inputToDo {
+  width: 72%;
+  border: none;
+  font-size: 21px;
+  border-bottom: solid 1px #1abc9c;
+  -webkit-transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+  -o-transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+  transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(96%, rgba(255, 255, 255, 0)), color-stop(4%, #1abc9c));
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 96%, #1abc9c 4%);
+  background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 96%, #1abc9c 4%);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, #1abc9c 4%);
+  background-position: -200px 0;
+  background-size: 200px 100%;
+  background-repeat: no-repeat;
+  color: #0e6252; }
+  .inputToDo:focus, .inputToDo:valid {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    outline: none;
+    background-position: 0 0; }
+    .inputToDo:focus::-webkit-input-placeholder, .inputToDo:valid::-webkit-input-placeholder {
+      color: #1abc9c;
+      font-size: 11px;
+      -webkit-transform: translateY(-20px);
+      transform: translateY(-20px);
+      visibility: visible !important; }
+
+.label__checkbox {
+  display: none; }
+
+.label__check {
+  display: inline-block;
+  border-radius: 50%;
+  border: 5px solid rgba(0, 0, 0, 0.1);
+  background: white;
+  vertical-align: middle;
+  margin-right: 20px;
+  width: 2em;
+  height: 2em;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-transition: border .3s ease;
+  -o-transition: border .3s ease;
+  transition: border .3s ease; }
+  .label__check i.icon {
+    opacity: 0.2;
+    font-size: 20px;
+    color: transparent;
+    -webkit-transition: opacity .3s .1s ease;
+    -o-transition: opacity .3s .1s ease;
+    transition: opacity .3s .1s ease;
+    -webkit-text-stroke: 3px rgba(0, 0, 0, 0.5); }
+  .label__check:hover {
+    border: 5px solid rgba(0, 0, 0, 0.2); }
+
+.label__checkbox:checked + .label__text .label__check {
+  -webkit-animation: check 0.5s cubic-bezier(0.895, 0.03, 0.685, 0.22) forwards;
+  animation: check 0.5s cubic-bezier(0.895, 0.03, 0.685, 0.22) forwards; }
+  .label__checkbox:checked + .label__text .label__check .icon {
+    opacity: 1;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+    color: white;
+    -webkit-text-stroke: 0;
+    -webkit-animation: icon 0.3s cubic-bezier(1, 0.008, 0.565, 1.65) 0.1s 1 forwards;
+    animation: icon 0.3s cubic-bezier(1, 0.008, 0.565, 1.65) 0.1s 1 forwards; }
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
+
+@-webkit-keyframes icon {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(0.3);
+    transform: scale(0.3); }
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
+
+@keyframes icon {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(0.3);
+    transform: scale(0.3); }
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
+
+@-webkit-keyframes check {
+  0% {
+    width: 1.5em;
+    height: 1.5em;
+    border-width: 5px; }
+  10% {
+    width: 1.5em;
+    height: 1.5em;
+    opacity: 0.1;
+    background: rgba(0, 0, 0, 0.2);
+    border-width: 15px; }
+  12% {
+    width: 1.5em;
+    height: 1.5em;
+    opacity: 0.4;
+    background: rgba(0, 0, 0, 0.1);
+    border-width: 0; }
+  50% {
+    width: 2em;
+    height: 2em;
+    background: #00d478;
+    border: 0;
+    opacity: 0.6; }
+  100% {
+    width: 2em;
+    height: 2em;
+    background: #00d478;
+    border: 0;
+    opacity: 1; } }
+
+@keyframes check {
+  0% {
+    width: 1.5em;
+    height: 1.5em;
+    border-width: 5px; }
+  10% {
+    width: 1.5em;
+    height: 1.5em;
+    opacity: 0.1;
+    background: rgba(0, 0, 0, 0.2);
+    border-width: 15px; }
+  12% {
+    width: 1.5em;
+    height: 1.5em;
+    opacity: 0.4;
+    background: rgba(0, 0, 0, 0.1);
+    border-width: 0; }
+  50% {
+    width: 2em;
+    height: 2em;
+    background: #00d478;
+    border: 0;
+    opacity: 0.6; }
+  100% {
+    width: 2em;
+    height: 2em;
+    background: #00d478;
+    border: 0;
+    opacity: 1; } }
